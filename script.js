@@ -160,9 +160,345 @@ const quizQuestionsThree = [
   },
 ];
 
+const quizQuestionsFour = [
+  {
+    question: "Which famous artist cut off his own ear?",
+    answers: [
+      { text: "Pablo Picasso", correct: false },
+      { text: "Vincent van Gogh", correct: true },
+      { text: "Salvador Dalí", correct: false },
+      { text: "Claude Monet", correct: false }
+    ]
+  },
+  {
+    question: "What is the smallest prime number?",
+    answers: [
+      { text: "0", correct: false },
+      { text: "1", correct: false },
+      { text: "2", correct: true },
+      { text: "3", correct: false }
+    ]
+  },
+  {
+    question: "Which planet is closest to the Sun?",
+    answers: [
+      { text: "Mercury", correct: true },
+      { text: "Venus", correct: false },
+      { text: "Earth", correct: false },
+      { text: "Mars", correct: false }
+    ]
+  },
+  {
+    question: "What is the capital of Canada?",
+    answers: [
+      { text: "Toronto", correct: false },
+      { text: "Vancouver", correct: false },
+      { text: "Montreal", correct: false },
+      { text: "Ottawa", correct: true }
+    ]
+  },
+  {
+    question: "Which language has the most native speakers?",
+    answers: [
+      { text: "English", correct: false },
+      { text: "Spanish", correct: false },
+      { text: "Mandarin Chinese", correct: true },
+      { text: "Hindi", correct: false }
+    ]
+  }
+];
+
+const quizQuestionsFive = [
+  {
+    question: "Who invented the telephone?",
+    answers: [
+      { text: "Thomas Edison", correct: false },
+      { text: "Alexander Graham Bell", correct: true },
+      { text: "Nikola Tesla", correct: false },
+      { text: "Guglielmo Marconi", correct: false }
+    ]
+  },
+  {
+    question: "What is the largest internal organ in the human body?",
+    answers: [
+      { text: "Heart", correct: false },
+      { text: "Brain", correct: false },
+      { text: "Liver", correct: true },
+      { text: "Lungs", correct: false }
+    ]
+  },
+  {
+    question: "Which country gifted the Statue of Liberty to the US?",
+    answers: [
+      { text: "Spain", correct: false },
+      { text: "England", correct: false },
+      { text: "France", correct: true },
+      { text: "Italy", correct: false }
+    ]
+  },
+  {
+    question: "What is the chemical symbol for silver?",
+    answers: [
+      { text: "Si", correct: false },
+      { text: "Ag", correct: true },
+      { text: "Sv", correct: false },
+      { text: "Au", correct: false }
+    ]
+  },
+  {
+    question: "Which ancient wonder was located in Babylon?",
+    answers: [
+      { text: "Great Pyramid", correct: false },
+      { text: "Colossus of Rhodes", correct: false },
+      { text: "Lighthouse of Alexandria", correct: false },
+      { text: "Hanging Gardens", correct: true },
+    ]
+  }
+];
+
+const quizQuestionsSix = [
+  {
+    question: "What is the main component of the Sun?",
+    answers: [
+      { text: "Liquid lava", correct: false },
+      { text: "Hydrogen", correct: true },
+      { text: "Oxygen", correct: false },
+      { text: "Carbon dioxide", correct: false }
+    ]
+  },
+  {
+    question: "Which bone is the longest in the human body?",
+    answers: [
+      { text: "Spine", correct: false },
+      { text: "Femur", correct: true },
+      { text: "Humerus", correct: false },
+      { text: "Tibia", correct: false }
+    ]
+  },
+  {
+    question: "In which country would you find the Great Barrier Reef?",
+    answers: [
+      { text: "Brazil", correct: false },
+      { text: "Indonesia", correct: false },
+      { text: "Australia", correct: true },
+      { text: "Philippines", correct: false }
+    ]
+  },
+  {
+    question: "How many continents are there?",
+    answers: [
+      { text: "5", correct: false },
+      { text: "6", correct: false },
+      { text: "7", correct: true },
+      { text: "8", correct: false }
+    ]
+  },
+  {
+    question: "What is the capital of South Africa?",
+    answers: [
+      { text: "Johannesburg", correct: false },
+      { text: "Cape Town", correct: true },
+      { text: "Pretoria", correct: false },
+      { text: "Durban", correct: false }
+    ]
+  }
+];
+
+const quizQuestionsSeven = [
+  {
+    question: "Which country invented tea?",
+    answers: [
+      { text: "India", correct: false },
+      { text: "England", correct: false },
+      { text: "China", correct: true },
+      { text: "Japan", correct: false }
+    ]
+  },
+  {
+    question: "How many hearts does an octopus have?",
+    answers: [
+      { text: "1", correct: false },
+      { text: "2", correct: false },
+      { text: "3", correct: true },
+      { text: "4", correct: false }
+    ]
+  },
+  {
+    question: "What is the world's fastest land animal?",
+    answers: [
+      { text: "Peregrine falcon", correct: false },
+      { text: "Cheetah", correct: true },
+      { text: "Pronghorn antelope", correct: false },
+      { text: "Sailfish", correct: false }
+    ]
+  },
+  {
+    question: "Which planet spins backwards?",
+    answers: [
+      { text: "Mercury", correct: false },
+      { text: "Venus", correct: true },
+      { text: "Mars", correct: false },
+      { text: "Uranus", correct: false }
+    ]
+  },
+  {
+    question: "What is the capital of Iceland?",
+    answers: [
+      { text: "Oslo", correct: false },
+      { text: "Stockholm", correct: false },
+      { text: "Reykjavik", correct: true },
+      { text: "Helsinki", correct: false }
+    ]
+  }
+];
+
+const quizQuestionsEight = [
+  {
+    question: "Which fruit has seeds on the outside?",
+    answers: [
+      { text: "Pineapple", correct: false },
+      { text: "Strawberry", correct: true },
+      { text: "Kiwi", correct: false },
+      { text: "Raspberry", correct: false }
+    ]
+  },
+  {
+    question: "How many time zones does Russia have?",
+    answers: [
+      { text: "5", correct: false },
+      { text: "7", correct: false },
+      { text: "11", correct: true },
+      { text: "15", correct: false }
+    ]
+  },
+  {
+    question: "What is the only mammal capable of true flight?",
+    answers: [
+      { text: "Flying squirrel", correct: false },
+      { text: "Bat", correct: true },
+      { text: "Sugar glider", correct: false },
+      { text: "Colugo", correct: false }
+    ]
+  },
+  {
+    question: "Which blood type is the universal donor?",
+    answers: [
+      { text: "A", correct: false },
+      { text: "B", correct: false },
+      { text: "AB", correct: false },
+      { text: "O", correct: true }
+    ]
+  },
+  {
+    question: "What is the largest species of shark?",
+    answers: [
+      { text: "Great white", correct: false },
+      { text: "Whale shark", correct: true },
+      { text: "Tiger shark", correct: false },
+      { text: "Megalodon", correct: false }
+    ]
+  }
+];
+
+const quizQuestionsNine = [
+  {
+    question: "Which country has the most islands?",
+    answers: [
+      { text: "Indonesia", correct: false },
+      { text: "Philippines", correct: false },
+      { text: "Sweden", correct: true },
+      { text: "Canada", correct: false }
+    ]
+  },
+  {
+    question: "What is the only continent without deserts?",
+    answers: [
+      { text: "Australia", correct: false },
+      { text: "Antarctica", correct: false },
+      { text: "Europe", correct: true },
+      { text: "South America", correct: false }
+    ]
+  },
+  {
+    question: "Which planet has the shortest day?",
+    answers: [
+      { text: "Mercury", correct: false },
+      { text: "Venus", correct: false },
+      { text: "Jupiter", correct: true },
+      { text: "Saturn", correct: false }
+    ]
+  },
+  {
+    question: "What is the world's longest river?",
+    answers: [
+      { text: "Amazon", correct: false },
+      { text: "Nile", correct: true },
+      { text: "Yangtze", correct: false },
+      { text: "Mississippi", correct: false }
+    ]
+  },
+  {
+    question: "Which language has the most words?",
+    answers: [
+      { text: "English", correct: true },
+      { text: "Arabic", correct: false },
+      { text: "Chinese", correct: false },
+      { text: "Russian", correct: false }
+    ]
+  }
+];
+
+const quizQuestionsTen = [
+  {
+    question: "What is the smallest country in the world?",
+    answers: [
+      { text: "Monaco", correct: false },
+      { text: "Vatican City", correct: true },
+      { text: "San Marino", correct: false },
+      { text: "Liechtenstein", correct: false }
+    ]
+  },
+  {
+    question: "Which animal never sleeps?",
+    answers: [
+      { text: "Bullfrog", correct: true },
+      { text: "Dolphin", correct: false },
+      { text: "Shark", correct: false },
+      { text: "Giraffe", correct: false }
+    ]
+  },
+  {
+    question: "What is the only letter not in any US state name?",
+    answers: [
+      { text: "X", correct: false },
+      { text: "Q", correct: true },
+      { text: "Z", correct: false },
+      { text: "J", correct: false }
+    ]
+  },
+  {
+    question: "Which planet rains diamonds?",
+    answers: [
+      { text: "Saturn", correct: false },
+      { text: "Jupiter", correct: false },
+      { text: "Neptune", correct: false },
+      { text: "Uranus", correct: true }
+    ]
+  },
+  {
+    question: "What is the most consumed fruit in the world?",
+    answers: [
+      { text: "Apple", correct: false },
+      { text: "Banana", correct: true },
+      { text: "Orange", correct: false },
+      { text: "Tomato", correct: false }
+    ]
+  }
+];
+
 
 //all quiz variables
-const allQuizSets = [quizQuestionsOne, quizQuestionsTwo, quizQuestionsThree];
+const allQuizSets = [quizQuestionsOne, quizQuestionsTwo, quizQuestionsThree, quizQuestionsFour, quizQuestionsFive, quizQuestionsSix, quizQuestionsSeven,quizQuestionsEight, quizQuestionsNine, quizQuestionsTen];
 
 let currentQuiz = [];
 let currentQuestionIndex = 0;
@@ -189,7 +525,61 @@ function getRandomQuiz() {
   return allQuizSets[randomIndex];
 }
 
+let usedQuestions = {
+  quizOne: Array(quizQuestionsOne.length).fill(false),
+  quizTwo: Array(quizQuestionsTwo.length).fill(false),
+  quizThree: Array(quizQuestionsThree.length).fill(false),
+  quizFour: Array(quizQuestionsFour.length).fill(false),
+  quizFive: Array(quizQuestionsFive.length).fill(false),
+  quizSix: Array(quizQuestionsSix.length).fill(false),
+  quizSeven: Array(quizQuestionsSeven.length).fill(false),
+  quizEight: Array(quizQuestionsEight.length).fill(false),
+  quizNine: Array(quizQuestionsNine.length).fill(false),
+  quizTen: Array(quizQuestionsTen.length).fill(false)
+};
 
+let exhaustedQuizzes = [];
+
+function getRadomUnusedQuestions(){
+  const availableQuizzes = allQuizSets.filter((_, index) => !exhaustedQuizzes.includes(index));
+
+  if(availableQuizzes.length === 0){
+    resetQuestionTracking();
+    return getRadomUnusedQuestions();
+  }
+
+  const quizIndex = Math.floor(Math.random() * availableQuizzes.length);
+
+  const selectedQuiz = availableQuizzes[quizIndex];
+  const originalQuizIndex = allQuizSets.indexOf(selectedQuiz);
+  const quizKey =`quiz${['One', 'Two', 'Three', 'Four', 'Five', 'Six', 'Seven', 'Eight', 'Nine', 'Ten'][originalQuizIndex]}`;
+
+  const unusedIndices = [];
+  usedQuestions[quizKey].forEach((used, index) => {
+    if (!used) unusedIndices.push(index);
+  });
+
+  if (unusedIndices.length === 0){
+    exhaustedQuizzes.push(originalQuizIndex);
+    return getRadomUnusedQuestions();
+  }
+
+  const questionIndex = unusedIndices[Math.floor(Math.random() * unusedIndices.length)];
+  usedQuestions[quizKey][questionIndex] = true;
+
+  return {
+    question: selectedQuiz[questionIndex],
+    quizIndex: originalQuizIndex,
+    questionIndex: questionIndex
+  };
+}
+
+function resetQuestionTracking (){
+  exhaustedQuizzes = [];
+  Object.keys(usedQuestions).forEach(quizKey => {
+    usedQuestions[quizKey] = usedQuestions[quizKey].map(() => false);
+  });
+}
 
 //add event listeners
 
@@ -203,11 +593,16 @@ function startQuiz(){
    scoreSpan.textContent = 0;
 
    initQuize();
+   resetQuestionTracking();
+   
 
    startScreen.classList.remove('active');
    quizScreen.classList.add('active');
 
+   const {question} = getRadomUnusedQuestions();
+
    showQuestion();
+   
 }
 
 
