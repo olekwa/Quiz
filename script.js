@@ -16,7 +16,7 @@ const restartButton = document.getElementById("restart-btn");
 const progressBar = document.getElementById("progress");
 
 
-const quizQuestions = [
+const quizQuestionsOne = [
   {
     question: "What is the capital of France?",
     answers: [
@@ -64,15 +64,132 @@ const quizQuestions = [
   },
 ];
 
-//quiz start vars
+const quizQuestionsTwo = [
+  {
+  question: "What is the largest mammal in the world?",
+  answers: [
+    { text: "Elephant", correct: false },
+    { text: "Blue Whale", correct: true },
+    { text: "Giraffe", correct: false },
+    { text: "Polar Bear", correct: false },
+  ],
+  },
+  {
+    question: "Who painted the Mona Lisa?",
+    answers: [
+      { text: "Vincent van Gogh", correct: false },
+      { text: "Pablo Picasso", correct: false },
+      { text: "Leonardo da Vinci", correct: true },
+      { text: "Michelangelo", correct: false },
+    ],
+  },
+  {
+    question: "Which country is home to the kangaroo?",
+    answers: [
+      { text: "Brazil", correct: false },
+      { text: "South Africa", correct: false },
+      { text: "Australia", correct: true },
+      { text: "New Zealand", correct: false },
+    ],
+  },
+  {
+    question: "What is the tallest mountain in the world?",
+    answers: [
+      { text: "K2", correct: false },
+      { text: "Mount Kilimanjaro", correct: false },
+      { text: "Mount Everest", correct: true },
+      { text: "Denali", correct: false },
+    ],
+  },
+  {
+    question: "Which language is the most widely spoken in the world?",
+    answers: [
+      { text: "English", correct: false },
+      { text: "Spanish", correct: false },
+      { text: "Mandarin Chinese", correct: true },
+      { text: "Hindi", correct: false },
+    ],
+  },
+];
 
+const quizQuestionsThree = [
+  {
+    question: "Who wrote 'Romeo and Juliet'?",
+    answers: [
+      { text: "Charles Dickens", correct: false },
+      { text: "Jane Austen", correct: false },
+      { text: "William Shakespeare", correct: true },
+      { text: "Mark Twain", correct: false },
+    ],
+  },
+  {
+    question: "What is the main gas found in Earth's atmosphere?",
+    answers: [
+      { text: "Oxygen", correct: false },
+      { text: "Carbon Dioxide", correct: false },
+      { text: "Nitrogen", correct: true },
+      { text: "Hydrogen", correct: false },
+    ],
+  },
+  {
+    question: "Which year did World War II end?",
+    answers: [
+      { text: "1943", correct: false },
+      { text: "1945", correct: true },
+      { text: "1947", correct: false },
+      { text: "1950", correct: false },
+    ],
+  },
+  {
+    question: "Which gas do plants absorb during photosynthesis?",
+    answers: [
+      { text: "Oxygen", correct: false },
+      { text: "Nitrogen", correct: false },
+      { text: "Carbon Dioxide", correct: true },
+      { text: "Hydrogen", correct: false },
+    ],
+  },
+  {
+    question: "Which element has the atomic number 1?",
+    answers: [
+      { text: "Helium", correct: false },
+      { text: "Oxygen", correct: false },
+      { text: "Magnesium", correct: false },
+      { text: "Hydrogen", correct: true },
+    ],
+  },
+];
+
+
+//all quiz variables
+const allQuizSets = [quizQuestionsOne, quizQuestionsTwo, quizQuestionsThree];
+
+let currentQuiz = [];
 let currentQuestionIndex = 0;
 let score = 0;
 let answerDisable = false;
 
+//initialise quiz
+function initQuize(){
+  currentQuiz = getRandomQuiz();
 
-totalQuestionsSpan.textContent = quizQuestions.length;
-maxScoreSpan.textContent = quizQuestions.length;
+  let currentQuestionIndex = 0;
+  let score = 0;
+  let answerDisable = false;
+
+  scoreSpan.textContent = score
+  totalQuestionsSpan.textContent = currentQuiz.length;
+  maxScoreSpan.textContent = currentQuiz.length;
+
+}
+
+//get quiz at random
+function getRandomQuiz() {
+  const randomIndex = Math.floor(Math.random() * allQuizSets.length);
+  return allQuizSets[randomIndex];
+}
+
+
 
 //add event listeners
 
@@ -85,6 +202,8 @@ function startQuiz(){
    score = 0;
    scoreSpan.textContent = 0;
 
+   initQuize();
+
    startScreen.classList.remove('active');
    quizScreen.classList.add('active');
 
@@ -95,15 +214,16 @@ function startQuiz(){
 function showQuestion (){
   //reset states
   answerDisable = false;
+  answersContainer.innerHTML = "";
 
-  const currentQuestion = quizQuestions[currentQuestionIndex];
+  const currentQuestion = currentQuiz[currentQuestionIndex];
 
   currentQuestionSpan.textContent = currentQuestionIndex + 1
 
-  const progressPercent = (currentQuestionIndex / quizQuestions.length) * 100;
+  const progressPercent = (currentQuestionIndex / currentQuiz.length) * 100;
   progressBar.style.width = progressPercent + "%";
   questionText.textContent = currentQuestion.question
-  answersContainer.innerHTML = "";
+  
 
 
   currentQuestion.answers.forEach(answer => {
@@ -133,6 +253,7 @@ function selectionAnswer(event) {
     } else if (button === selectedButton) {
       button.classList.add('incorrect');
     }
+    button.disable = true;
   });
 
   if(isCorrect) {
@@ -143,7 +264,7 @@ function selectionAnswer(event) {
   setTimeout(() => {
     currentQuestionIndex++;
 
-    if(currentQuestionIndex < quizQuestions.length) {
+    if(currentQuestionIndex < currentQuiz.length) {
       showQuestion();
     } else{
       showResults()
@@ -157,7 +278,7 @@ function showResults() {
 
   finalScoreSpan.textContent = score;
 
-  const percentage = (score/quizQuestions.length) * 100;
+  const percentage = (score/currentQuiz.length) * 100;
 
   if(percentage === 100){
     resultMessage.textContent = "Perfect! You're a genius!";
